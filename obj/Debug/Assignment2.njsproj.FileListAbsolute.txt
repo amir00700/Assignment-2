@@ -1,0 +1,3 @@
+C:\Users\amirs\Downloads\PassportAuthExample-master\obj\Debug\Assignment2.njsproj.CoreCompileInputs.cache
+C:\Users\amirs\Downloads\PassportAuthExample-master\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\amirs\Downloads\PassportAuthExample-master\obj\Debug\Assignment2.njsprojAssemblyReference.cache
