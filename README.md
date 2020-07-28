@@ -4,4 +4,6 @@ added bootsrap css to the web,
 
 added mongodb cloud,
 
-wokring with authorization
+wokring with authorization,
+
+added header and footer to the website
