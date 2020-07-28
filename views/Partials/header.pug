@@ -25,11 +25,12 @@ html
 		nav.navbar.navbar-dark.bg-primary.navbar-expand-lg
 			div.container-fluid
 				div.navbar-header
-					a.navbar-brand(href='/') Movie Database Web App
+					a.navbar-brand(href='/') Laptopsaler Web App
 				ul.nav.navbar-nav
 					if isLogin
 						li.nav-item
-							a.nav-link(href='/users/logout') Logout
+							a.nav-link(href='/logout') Logout
+							
 					else
 						li.nav-item
 							a.nav-link(href='/login') Login

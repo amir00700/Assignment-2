@@ -40,6 +40,9 @@
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
+    <Content Include="views\logout.pug">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\Partials\footer.pug" />
     <Content Include="views\Partials\header.pug">
       <SubType>Code</SubType>
@@ -61,6 +64,7 @@
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
+    <Folder Include="views\Sale\" />
     <Folder Include="views\Partials\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->

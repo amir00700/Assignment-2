@@ -6,7 +6,7 @@ var userModel = require('../models/user');
 router.get('/', function (req, res) {
     if (req.isAuthenticated()) {
         userModel.find({}, function (err, users) {
-            res.render('users', {users:users, user: req.user });
+            res.render('users', { users: users, user: req.user });
         });
     } else {
         res.redirect('/login');
