@@ -1,0 +1,12 @@
+extends layout
+blokc content
+ h1 Sell yor Laptop
+      form(method='POST', action='/login')
+        #form-group
+          label Laptop Brand
+          input.form-control(name='lprodut',type='text')
+        #form-group
+          label Laptop Details:
+          input.form-control(name='Ldetails',type='text')
+        br
+        input.btn.btn-primary(type='submit',value='laptopsale')

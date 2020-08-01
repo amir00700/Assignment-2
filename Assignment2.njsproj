@@ -47,6 +47,9 @@
     <Content Include="views\Partials\header.pug">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\Sale\laptopsale.pug">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\users.pug" />
     <Content Include="views\index.pug" />
     <Content Include="views\layout.pug" />
