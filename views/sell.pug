@@ -1,0 +1,16 @@
+extends Layout
+block content
+ h1 sell your product
+      form(method='POST', action='/register')
+        #form-group
+          label Brand:
+          input.form-control(name='name', type='text')
+        #form-group
+          label Description:
+          input.form-control(name='username', type='text')
+        #form-group
+          label Year:
+          input.form-control(name='text',type='date')
+         
+        br
+        input.btn.btn-primary(type='submit',value='Sell')

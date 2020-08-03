@@ -55,9 +55,16 @@ router.get('/register', function (req, res) {
     res.render('register');
 });
 
+
+/*GET for sell*/
+router.get('/sell', function (req, res) {
+    res.render('sell');
+});
+
 /*GET for login*/
 router.get('/login', function (req, res) {
     res.render('login');
 });
+
 
 module.exports = router;
