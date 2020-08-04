@@ -13,7 +13,7 @@ var bcrypt = require('bcryptjs');
 const MongoClient = require('mongodb').MongoClient;
 const MongoStore = require('connect-mongo')(session);
 var mongoose = require('mongoose');
-const uri = "mongodb+srv://amir:123@cluster0-dxtpg.mongodb.net/ok?retryWrites=true&w=majority";
+const uri = "mongodb+srv://amir:123@cluster0-dxtpg.mongodb.net/laptopsale?retryWrites=true&w=majority";
 //Connect to our database
 try {
     mongoose.connect(uri, { useNewUrlParser: true });
@@ -44,7 +44,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// required for passport session
+// requireed for passport session
 app.use(session({
     secret: 'secrettexthere',
     saveUninitialized: true,
@@ -67,7 +67,7 @@ passport.deserializeUser(function (id, done) {
     });
 });
 
-//Local stragety use for user
+//Local stragety to use for user
 passport.use(new LocalStrategy(
     function (username, password, done) {
         userModel.findOne({
@@ -98,7 +98,7 @@ app.use(function (req, res, next) {
     next(err);
 });
 
-// error handlers
+// error handlers function
 
 // development error handler
 // will print stacktrace
