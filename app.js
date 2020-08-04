@@ -55,19 +55,19 @@ app.use(passport.session());
 app.use('/', routes);
 app.use('/users', users);
 
-//Serialize user
+//passport serailize user option
 passport.serializeUser(function (user, done) {
     done(null, user.id)
 });
 
-//Deserialize user try to find username
+//Deserialize option for find user
 passport.deserializeUser(function (id, done) {
     userModel.findById(id, function (err, user) {
         done(err, user);
     });
 });
 
-//Local strategy used for logging users
+//Local stragety use for user
 passport.use(new LocalStrategy(
     function (username, password, done) {
         userModel.findOne({
@@ -81,7 +81,7 @@ passport.use(new LocalStrategy(
                 return done(null, false);
             }
 
-            //Compare hashed passwords
+            // hashed passwords
             if (!bcrypt.compareSync(password, user.password)) {
                 return done(null, false);
             }
