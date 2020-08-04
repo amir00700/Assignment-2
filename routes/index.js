@@ -4,12 +4,12 @@ var router = express.Router();
 var passport = require('passport');
 var userModel = require('../models/user');
 var bcrypt = require('bcryptjs');
-/* GET home page. */
+/*this will get home page*/
 router.get('/', function (req, res) {
     res.render('index', { user: req.user });
 });
 
-/*POST for login*/
+/*POST method for login option with authintictaion*/
 //Try to login with passport
 router.post('/login', passport.authenticate('local', {
     successRedirect: '/',
@@ -17,22 +17,22 @@ router.post('/login', passport.authenticate('local', {
     failureMessage: 'Invalid Login'
 }));
 
-/*Logout*/
+/*Logout */
 router.get('/logout', function (req, res) {
     req.session.destroy(function (err) {
         res.redirect('/');
     });
 });
 
-/*POST for register*/
+/*POST for register pug*/
 router.post('/register', function (req, res) {
-    //Insert user
+    //this will insert user
     bcrypt.hash(req.body.password, 10, function (err, hash) {
         var registerUser = {
             username: req.body.username,
             password: hash
         }
-        //Check if user already exists
+        // this will Check if user already exists or not 
         userModel.find({ username: registerUser.username }, function (err, user) {
             if (err) console.log(err);
             if (user.length) return res.redirect('/login');
@@ -50,13 +50,13 @@ router.post('/register', function (req, res) {
     })
 });
 
-/*GET for register*/
+/*router for  register*/
 router.get('/register', function (req, res) {
     res.render('register');
 });
 
 
-/*GET for sell*/
+/* router for sell*/
 router.get('/sell', function (req, res) {
     res.render('sell');
 });
