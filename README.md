@@ -8,4 +8,4 @@ wokring with authorization,
 
 added header and footer to the website
 
-stylesheet borrowed from bootsrap webiste
+stylesheet borrowed from bootstrap website
