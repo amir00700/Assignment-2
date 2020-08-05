@@ -13,20 +13,14 @@ var bcrypt = require('bcryptjs');
 const MongoClient = require('mongodb').MongoClient;
 const MongoStore = require('connect-mongo')(session);
 var mongoose = require('mongoose');
-const uri = "mongodb+srv://amir:007@cluster0-dxtpg.mongodb.net/laptopsale?retryWrites=true&w=majority";
-// this will Connect mongodb cloud database
-try {
-    mongoose.connect(uri, { useNewUrlParser: true });
-    var db = mongoose.connection;
-    db.on('error', function (err) {
-        console.log(err);
-    });
-    db.once('open', function (callback) {
-        console.log('Connected to MongoDB');
-    });
-} catch (err) {
-    console.log("Error : " + err);
-}
+
+const uri = "mongodb+srv://amir:<123>@cluster0.kzkey.mongodb.net/<laptosell>?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+    const collection = client.db("test").collection("devices");
+    // perform actions on the collection object
+    client.close();
+});
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var userModel = require('./models/user');
