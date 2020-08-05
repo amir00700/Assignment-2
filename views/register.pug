@@ -9,15 +9,15 @@ block content
       form(method='POST', action='/register')
         #form-group
           label Your Name:
-          input.form-control(name='name', type='text')
+          input.form-control(name='name', type='text' id='username')
         #form-group
           label Your Email:
-          input.form-control(name='username', type='text')
+          input.form-control(name='username', type='text', id='useremail')
         #form-group
           label  Create Your Password:
-          input.form-control(name='password',type='password')
+          input.form-control(name='password',type='password', id='userpw')
         #form-group
           label Confirm Password:
-          input.form-control(name='cpassword',type='password')
+          input.form-control(name='cpassword',type='password', id='conpw')
         br
         input.btn.btn-primary(type='submit',value='Register')

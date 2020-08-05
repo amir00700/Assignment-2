@@ -1,18 +1,21 @@
 extends Layout
 
 block content
- h1 sell your product
+ 
 
         form(method='POST', action='/sell')
         #form-group
           label Brand:
-          input.form-control(name='name', type='text')
+          input.form-control(name='bname', type='text',id='br')
         #form-group
           label Description:
-          input.form-control(name='ldescription', type='text')
+          input.form-control(name='ldescription', type='text',id='des')
         #form-group
           label Year:
-          input.form-control(name='text',type='date')
+          input.form-control(name='text',type='date',id='date')
+          #form-group
+          label Upload image of your Product:
+          input.form-control(name='filename',type='file', id='myfile')
          
         br
         input.btn.btn-primary(type='submit',value='Sell')
