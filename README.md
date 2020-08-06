@@ -9,3 +9,4 @@ wokring with authorization,
 added header and footer to the website
 
 stylesheet and navvar borrowed from bootstrap website
+this application is for selling and buying old laptops, The database will be connected to mongodb cloud atlas
