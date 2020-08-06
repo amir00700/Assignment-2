@@ -8,4 +8,4 @@ wokring with authorization,
 
 added header and footer to the website
 
-stylesheetand navvar borrowed from bootstrap website
+stylesheet and navvar borrowed from bootstrap website
